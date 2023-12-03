@@ -1,0 +1,18 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Warna latar belakang -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Warna dan ketebalan stroke -->
+    <stroke
+        android:width="40dp"
+        android:color="@color/twitterblue" />
+
+    <!-- Padding untuk menjaga jarak antara garis dengan konten -->
+    <padding
+        android:left="2dp"
+        android:top="2dp"
+        android:right="2dp"
+        android:bottom="2dp" />
+</shape>
