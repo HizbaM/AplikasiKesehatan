@@ -32,13 +32,6 @@ class ChatDokterActivity : AppCompatActivity() {
         }
 
         ibkembalil.setOnClickListener{
-                val fragment = ChatDokterFragment() // Buat instance dari ChatDokterFragment
-                supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.fldokter, fragment)
-                    addToBackStack(null)
-                    commit()
-                }
-
                 // Kode untuk kembali ke MainActivity setelah menampilkan fragment
                 val intent = Intent(this, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK

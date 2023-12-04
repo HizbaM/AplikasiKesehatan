@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgberanda"
     tools:context=".fragments.BerandaFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+
         >
 
 
@@ -250,10 +251,10 @@
 
             <ImageButton
                 android:id="@+id/ibartikel"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="51dp"
+                android:layout_height="52dp"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="14dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="15dp"
@@ -342,7 +343,7 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Klinik Online SehatQ"
-            android:textColor="@color/twitterblue"
+            android:textColor="@color/white"
             android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton5"
@@ -356,7 +357,7 @@
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/poppins_medium"
             android:text="Mudah dan praktis! Konsultasi dan book dokter spesialist cukup di klinik Online SehatQ. Temukan layanan terbaik disini"
-            android:textColor="@color/twitterblue"
+            android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -627,7 +628,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:background="@color/white"
+            android:background="@color/blue"
             app:layout_constraintTop_toBottomOf="@+id/hsvgambar1">
 
         </RelativeLayout>

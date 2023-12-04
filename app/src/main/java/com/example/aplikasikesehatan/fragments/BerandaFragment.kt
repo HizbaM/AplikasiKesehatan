@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
+import com.example.aplikasikesehatan.ArtikelActivity
 import com.example.aplikasikesehatan.ChatDokterActivity
 import com.example.aplikasikesehatan.R
+import com.example.aplikasikesehatan.RumahSakitActivity
 import com.example.aplikasikesehatan.TokoActivity
 
 // TODO: Rename parameter arguments, choose names that match
@@ -39,6 +41,8 @@ class BerandaFragment : Fragment() {
 
         val rlchatdokter = view.findViewById<RelativeLayout>(R.id.rlchatdokter)
         val rltoko = view.findViewById<RelativeLayout>(R.id.rltoko)
+        val rlrumahsakit = view.findViewById<RelativeLayout>(R.id.rlrumahsakit)
+        val rlartikel = view.findViewById<RelativeLayout>(R.id.rlartikel)
 
         rlchatdokter.setOnClickListener {
             val intent = Intent(activity, ChatDokterActivity::class.java)
@@ -47,6 +51,16 @@ class BerandaFragment : Fragment() {
 
         rltoko.setOnClickListener {
             val intent = Intent(activity, TokoActivity::class.java)
+            startActivity(intent)
+        }
+
+        rlrumahsakit.setOnClickListener {
+            val intent = Intent(activity, RumahSakitActivity::class.java)
+            startActivity(intent)
+        }
+
+        rlartikel.setOnClickListener {
+            val intent = Intent(activity, ArtikelActivity::class.java)
             startActivity(intent)
         }
     }

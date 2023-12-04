@@ -13,16 +13,26 @@
         android:theme="@style/Theme.AplikasiKesehatan"
         tools:targetApi="31">
         <activity
-            android:name=".TokoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true">
+            android:name=".SplashActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ArtikelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RumahSakitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TokoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".SplashScreenActivity1"
@@ -38,7 +48,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

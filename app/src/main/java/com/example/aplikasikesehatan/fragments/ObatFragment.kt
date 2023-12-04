@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.RelativeLayout
 import com.example.aplikasikesehatan.ChatDokterActivity
 import com.example.aplikasikesehatan.R
+import com.example.aplikasikesehatan.TokoActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +19,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [DetailObatFragment.newInstance] factory method to
+ * Use the [ObatFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class DetailObatFragment : Fragment() {
+class ObatFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,17 +40,31 @@ class DetailObatFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail_obat, container, false)
+        return inflater.inflate(R.layout.fragment_obat, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val ibkembalil = view.findViewById<ImageButton>(R.id.ibkembali)
+        val rldetail = view.findViewById<RelativeLayout>(R.id.relativeLayout4)
+
 
         ibkembalil.setOnClickListener {
-            // Menggunakan metode popBackStack untuk kembali ke fragment sebelumnya
-            requireActivity().supportFragmentManager.popBackStack()
+            val intent = Intent(activity, TokoActivity::class.java)
+            startActivity(intent)
+        }
+
+        rldetail.setOnClickListener {
+            val fragment = DetailObatFragment() // Buat instance dari fragment tujuan
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+
+            // Ganti R.id.container dengan ID dari container di mana Anda ingin menampilkan fragment selanjutnya
+            transaction.replace(R.id.flobat, fragment)
+
+            transaction.addToBackStack(null)
+
+            transaction.commit()
         }
     }
 
@@ -59,12 +75,12 @@ class DetailObatFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment DetailObatFragment.
+         * @return A new instance of fragment ObatFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            DetailObatFragment().apply {
+            ObatFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -35,7 +35,7 @@ class CariFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_cari, container, false)
+        return inflater.inflate(R.layout.fragment_cari, container, false)
     }
 
     companion object {

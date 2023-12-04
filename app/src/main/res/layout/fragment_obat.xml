@@ -8,6 +8,7 @@
     android:background="@color/white"
     tools:context=".TokoActivity">
     <FrameLayout
+        android:id="@+id/flobat"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -58,67 +59,124 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <RelativeLayout
-                android:id="@+id/relativeLayout5"
+                android:id="@+id/relativeLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="700dp"
-                    android:src="@drawable/detailobat" />
+                    android:id="@+id/ivobat"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/prabonexproduk" />
+
+                <TextView
+                    android:id="@+id/tvjudulobat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivobat"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Prabonex"
+                    android:textColor="@color/twitterblue"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvharga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvjudulobat"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Rp 27.000"
+                    android:textColor="@color/twitterblue"
+                    android:textSize="28sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/twitterblue"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+                <TextView
+                    android:id="@+id/tvdeskripsiobat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Deskripsi Produk"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvdeskripsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvdeskripsiobat"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingBottom="15dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et laoreet metus. Aliquam erat volutpat. Nunc elit quam, tempus imperdiet congue a, lacinia luctus lectus. Vestibulum tincidunt tortor justo."
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="-25dp"
+                android:layout_height="200dp"
                 android:background="@color/twitterblue"
-                app:layout_constraintTop_toBottomOf="@+id/relativeLayout5">
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
 
 
                 <androidx.cardview.widget.CardView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_width="150dp"
                     android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
                     android:layout_alignParentStart="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    app:cardCornerRadius="15dp">
+                    >
 
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="50dp"
-                        android:fontFamily="@font/poppins_bold"
                         android:gravity="center"
                         android:text="Beli"
-                        android:textColor="@color/twitterblue"
-                        android:textSize="22sp" />
+                        android:textSize="22sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/twitterblue"/>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="200dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentEnd="true"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
-                    app:cardCornerRadius="15dp">
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_alignParentEnd="true"
+                    >
 
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="50dp"
-                        android:fontFamily="@font/poppins_bold"
                         android:gravity="center"
                         android:text="Tambah"
-                        android:textColor="@color/twitterblue"
-                        android:textSize="22sp" />
+                        android:textSize="22sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/twitterblue"/>
 
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
-
-
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
